@@ -6,7 +6,8 @@
         <string>source.httpie</string>
         <key>fileTypes</key>
         <array>
-            <string>httpie</string>
+            <string>http</string>
+            <string>rest</string>
         </array>
         <key>keyEquivalent</key>
         <string>^~H</string>
@@ -39,7 +40,8 @@
             </dict>
             <dict>
                 <key>begin</key>
-                <string>^\s*(?=\<\S)</string>
+                <string>^\s*(?=\<\S)                                
+                </string>
                 <key>name</key>
                 <string>http.request.body.xml</string>
                 <key>end</key>
