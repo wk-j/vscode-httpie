@@ -15,6 +15,38 @@
     ],
     "main": "./out/extension",
     "contributes": {
+        "languages": [
+            {
+                "id": "httpie",
+                "aliases": [
+                    "HTTPIE",
+                    "httpie",
+                    "Httpie"
+                ],
+                "extensions": [
+                    ".httpie"
+                ],
+                "firstLine": "^(http|GET|POST|PUT|DELETE|PATCH|HEAD|OPTIONS|CONNECT|TRACE)\\s+(.*?)HTTP/[0-9\\.]+$",
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "httpie",
+                "scopeName": "source.httpie",
+                "path": "./syntaxes/httpie.tmLanguage"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "httpie",
+                "path": "./snippets/httpie.json"
+            },
+            {
+                "language": "plaintext",
+                "path": "./snippets/httpie.json"
+            }
+        ],
         "commands": [
             {
                 "command": "extension.sayHello",
