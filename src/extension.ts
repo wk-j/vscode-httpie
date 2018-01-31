@@ -4,10 +4,14 @@
 import * as vscode from 'vscode';
 import { HttpCodeLensProvider } from './httpCodeLensProvider';
 import { ExtensionContext, commands, languages, TextDocument, Range, Uri, workspace, window } from 'vscode';
+import { RequestController } from './requestController';
+
+var requestController = new RequestController();
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
+    context.subscriptions.push(commands.registerCommand('httpie-client.request', ((document: TextDocument, range: Range) => requestController.run(range))));
     context.subscriptions.push(languages.registerCodeLensProvider('httpie', new HttpCodeLensProvider()));
 }
 

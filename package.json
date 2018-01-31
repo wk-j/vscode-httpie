@@ -11,6 +11,7 @@
         "Other"
     ],
     "activationEvents": [
+        "onCommand:httpie-client.request",
         "onLanguage:httpie"
     ],
     "main": "./out/extension",
