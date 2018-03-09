@@ -1,9 +1,10 @@
 {
     "name": "vscode-httpie",
-    "displayName": "vscode-httpie",
-    "description": "",
+    "displayName": "HTTPie",
+    "description": "cURL-like tool for humans",
     "version": "0.0.1",
     "publisher": "wk-j",
+    "icon": "images/icon.png",
     "engines": {
         "vscode": "^1.19.0"
     },
@@ -29,7 +30,13 @@
                 ]
             }
         ],
-        "grammars": [],
+        "grammars": [
+            {
+                "language": "httpie",
+                "scopeName": "source.httpie",
+                "path": "./syntaxes/httpie.json"
+            }
+        ],
         "snippets": [],
         "commands": []
     },

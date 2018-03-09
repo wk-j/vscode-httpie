@@ -1,0 +1,30 @@
+{
+    "name": "httpie",
+    "fileTypes": [
+        "httpie"
+    ],
+    "scopeName": "source.httpie",
+    "patterns": [
+        {
+            "match": "(http)\\s",
+            "captures": {
+                "1": {
+                    "name": "keyword.control"
+                }
+            }
+        },
+        {
+            "begin": "///",
+            "end": "$",
+            "name": "comment.line"
+        },
+        {
+            "match": "(GET|POST|PUT|DELETE|get|post|put|delete)",
+            "name": "constant.language"
+        },
+        {
+            "match": "(--json|--form|--pretty|--style|--print|--headers|--body|--verbose|--all|--history-print|--stream|--output|--download|--continue|--session|--auth|--auth-type|--proxy|--follow|--max|--timeout|--check-status|--verify|--ssl|--cert|--ignore-stdin|--help|--version|--traceback|--default-scheme|--debug)",
+            "name": "constant.language"
+        }
+    ]
+}

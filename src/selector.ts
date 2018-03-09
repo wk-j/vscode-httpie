@@ -1,8 +1,6 @@
-"use strict";
-
-import { TextEditor, Range } from 'vscode';
-import { EOL } from 'os';
-import * as Constants from './constants';
+import { EOL } from "os";
+import { Range, TextEditor } from "vscode";
+import * as Constants from "./constants";
 
 export class Selector {
     private static readonly responseStatusLineRegex = /^\s*HTTP\/[\d.]+/;
@@ -26,7 +24,8 @@ export class Selector {
     public static getDelimiterRows(lines: string[]) {
         let rows: number[] = [];
         for (let index = 0; index < lines.length; index++) {
-            if (lines[index].match(/^#{3,}/)) {
+            // if (lines[index].match(/^#{3,}/)) {
+            if (lines[index].match(/^\/{3,}/)) {
                 rows.push(index);
             }
         }
@@ -38,7 +37,7 @@ export class Selector {
     }
 
     public static isEmptyLine(line: string): boolean {
-        return line.trim() === '';
+        return line.trim() === "";
     }
 
     public static isVariableDefinitionLine(line: string): boolean {

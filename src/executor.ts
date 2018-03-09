@@ -1,7 +1,7 @@
 import * as vscode from "vscode";
 
 export class Executor {
-    public static runInTerminal(command: string, terminal: string = "Httpie"): void {
+    public static runInTerminal(command: string, terminal: string = "HTTPie"): void {
         if (this.terminals[terminal] === undefined) {
             const term = vscode.window.createTerminal(terminal)
             this.terminals[terminal] = term
