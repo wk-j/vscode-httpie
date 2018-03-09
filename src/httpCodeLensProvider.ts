@@ -1,7 +1,5 @@
-'use strict';
-
-import { CodeLensProvider, TextDocument, CancellationToken, CodeLens, Command, Range } from 'vscode';
-import { Selector } from './selector';
+import { CancellationToken, CodeLens, CodeLensProvider, Command, Range, TextDocument } from "vscode";
+import { Selector } from "./selector";
 
 export class HttpCodeLensProvider implements CodeLensProvider {
     public provideCodeLenses(document: TextDocument, token: CancellationToken): Promise<CodeLens[]> {
@@ -10,7 +8,7 @@ export class HttpCodeLensProvider implements CodeLensProvider {
         let delimitedLines: number[] = Selector.getDelimiterRows(lines);
         delimitedLines.push(lines.length);
 
-        let requestRange: [number, number][] = [];
+        let requestRange: Array<[number, number]> = [];
         let start: number = 0;
         for (let index = 0; index < delimitedLines.length; index++) {
             let end = delimitedLines[index] - 1;
@@ -22,8 +20,6 @@ export class HttpCodeLensProvider implements CodeLensProvider {
 
         for (let index = 0; index < requestRange.length; index++) {
             let [blockStart, blockEnd] = requestRange[index];
-
-            // get real start for current requestRange
             while (blockStart <= blockEnd) {
                 if (Selector.isEmptyLine(lines[blockStart]) ||
                     Selector.isCommentLine(lines[blockStart]) ||
@@ -42,8 +38,8 @@ export class HttpCodeLensProvider implements CodeLensProvider {
                 const range = new Range(blockStart, 0, blockEnd, 0);
                 const cmd: Command = {
                     arguments: [document, range],
-                    title: 'Send Request',
-                    command: 'httpie-client.request'
+                    title: "Send Request",
+                    command: "httpie-client.request"
                 };
                 blocks.push(new CodeLens(range, cmd));
             }
