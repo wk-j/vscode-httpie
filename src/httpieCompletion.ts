@@ -1,5 +1,13 @@
 import * as vscode from "vscode"
 
+const keywords = [
+    "GET",
+    "POST",
+    "DELETE",
+    "PUT",
+    "http",
+]
+
 const options = [
     "--json",
     "--form",
@@ -43,7 +51,10 @@ export class HttpieCompletion implements vscode.CompletionItemProvider {
         return options.map(x => ({
             label: x,
             insertText: x
-        }));
+        })).concat(keywords.map(x => ({
+            label: x,
+            insertText: x
+        })));
     }
     public resolveCompletionItem?(
         item: vscode.CompletionItem,

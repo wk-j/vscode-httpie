@@ -1,7 +1,7 @@
 {
     "name": "vscode-httpie",
     "displayName": "HTTPie",
-    "description": "cURL-like tool for humans",
+    "description": "HTTPie suport for Visual Studio Code",
     "version": "0.0.1",
     "publisher": "wk-j",
     "icon": "images/icon.png",

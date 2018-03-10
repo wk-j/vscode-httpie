@@ -40,13 +40,20 @@
             }
         },
         {
-            "match": "\\b(\\S*)=(\\S*)\\s",
+            "match": "\\b(\\S*[^=])=",
             "captures": {
                 "1": {
                     "name": "keyword.control"
-                },
-                "2": {}
+                }
             }
+        },
+        {
+            "match": "\"(.*?)\"",
+            "name": "string.quoted"
+        },
+        {
+            "match": "'(.*?)'",
+            "name": "string.quoted"
         }
     ]
 }
