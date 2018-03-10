@@ -6,7 +6,7 @@ Task("Create-Icon").Does(() => {
         FontSize = 50,
         Padding = 30,
         Foreground = "White",
-        Background = "Green"
+        Background = "Blue"
     };
     CreateLogo("HTTPie", "images/icon.png", settings);
 });

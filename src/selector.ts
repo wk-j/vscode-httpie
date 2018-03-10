@@ -24,8 +24,7 @@ export class Selector {
     public static getDelimiterRows(lines: string[]) {
         let rows: number[] = [];
         for (let index = 0; index < lines.length; index++) {
-            // if (lines[index].match(/^#{3,}/)) {
-            if (lines[index].match(/^\/{3,}/)) {
+            if (lines[index].match(/^\/{2,}/)) {
                 rows.push(index);
             }
         }

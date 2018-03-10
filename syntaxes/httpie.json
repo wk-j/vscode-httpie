@@ -14,7 +14,7 @@
             }
         },
         {
-            "begin": "///",
+            "begin": "//",
             "end": "$",
             "name": "comment.line"
         },
@@ -25,6 +25,28 @@
         {
             "match": "(--json|--form|--pretty|--style|--print|--headers|--body|--verbose|--all|--history-print|--stream|--output|--download|--continue|--session|--auth|--auth-type|--proxy|--follow|--max|--timeout|--check-status|--verify|--ssl|--cert|--ignore-stdin|--help|--version|--traceback|--default-scheme|--debug)",
             "name": "constant.language"
+        },
+        {
+            "match": "[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.[a-z]{2,6}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)",
+            "name": "string.quoted"
+        },
+        {
+            "match": "\\b(\\S*):(\\S*)\\s",
+            "captures": {
+                "1": {
+                    "name": "keyword.control"
+                },
+                "2": {}
+            }
+        },
+        {
+            "match": "\\b(\\S*)=(\\S*)\\s",
+            "captures": {
+                "1": {
+                    "name": "keyword.control"
+                },
+                "2": {}
+            }
         }
     ]
 }
