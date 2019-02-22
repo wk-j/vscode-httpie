@@ -5,7 +5,7 @@
 ## Install
 
 - [HTTPie](https://httpie.org)
-- [VS Code HTTPie](vscode:extension/wk-j.vscode-httpie)
+- [VS Code HTTPie](https://marketplace.visualstudio.com/items?itemName=wk-j.vscode-httpie)
 
 ## Usage
 
