@@ -2,7 +2,7 @@
     "name": "vscode-httpie",
     "displayName": "HTTPie",
     "description": "HTTPie suport for Visual Studio Code",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "wk-j",
     "icon": "images/icon.png",
     "repository": {

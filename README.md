@@ -2,6 +2,8 @@
 
 [![Version](https://vsmarketplacebadge.apphb.com/version/wk-j.vscode-httpie.svg)](https://marketplace.visualstudio.com/items?itemName=wk-j.vscode-httpie) [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/wk-j.vscode-httpie.svg)](https://marketplace.visualstudio.com/items?itemName=wk-j.vscode-httpie)
 
+![](images/icon.png)
+
 ## Install
 
 - [HTTPie](https://httpie.org)
