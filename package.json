@@ -2,9 +2,9 @@
     "name": "vscode-httpie",
     "displayName": "HTTPie",
     "description": "HTTPie suport for Visual Studio Code",
-    "version": "0.0.3",
+    "version": "0.0.4",
     "publisher": "wk-j",
-    "icon": "images/icon.png",
+    "icon": "resource/logo.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/wk-j/vscode-httpie"

@@ -1,15 +1,13 @@
-## HTTPie
+![](https://raw.githubusercontent.com/wk-j/vscode-httpie/master/resource/logo.png)
 
 [![Version](https://vsmarketplacebadge.apphb.com/version/wk-j.vscode-httpie.svg)](https://marketplace.visualstudio.com/items?itemName=wk-j.vscode-httpie) [![Installs](https://vsmarketplacebadge.apphb.com/installs-short/wk-j.vscode-httpie.svg)](https://marketplace.visualstudio.com/items?itemName=wk-j.vscode-httpie)
 
-![](images/icon.png)
-
-## Install
+# Installation
 
 - [HTTPie](https://httpie.org)
 - [VS Code HTTPie](https://marketplace.visualstudio.com/items?itemName=wk-j.vscode-httpie)
 
-## Usage
+# Usage
 
 1. Create `Reqeust.httpie`
 2. Add HTTPie commands
